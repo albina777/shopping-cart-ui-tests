@@ -19,7 +19,7 @@ def test_full_shopping_cart_flow(page, custom_computer_name, processor, ram, hdd
     product = ProductPage(page)
     cart = CartPage(page)
 
-    # 1️⃣ Add Gift Card
+    # Adding Gift Card
     home.go_to_homepage()
     home.select_product("25 Virtual Gift Card")
     product.add_gift_card(
@@ -30,26 +30,26 @@ def test_full_shopping_cart_flow(page, custom_computer_name, processor, ram, hdd
         quantity=1
     )
 
-    # 2️⃣ Add Laptop from homepage
+    # Adding Laptop from homepage
     home.go_to_homepage()
     home.add_laptop_from_homepage()
 
-    # 3️⃣ Add Custom Computer (cheap or expensive based on param)
+    # Adding Custom Computer (cheap or expensive based on param)
     home.go_to_homepage()
     home.select_product(custom_computer_name)
     product.add_custom_computer_to_cart(processor, ram, hdd)
 
-    # ✅ Verify items in cart
+    # Verifying items in card
     cart.go_to_cart()
     cart.verify_item_is_in_cart("$25 Virtual Gift Card")
     cart.verify_item_is_in_cart("14.1-inch Laptop")
     cart.verify_item_is_in_cart(custom_computer_name)
 
-    # ❌ Remove one item
+    #  Removing one item
     cart.remove_item("14.1-inch Laptop")
     page.wait_for_timeout(1000)
     assert not cart.is_visible(CART_ROW_BY_NAME("14.1-inch Laptop"))
 
-    # 🧹 Clear the cart
+    # Clearing the cart
     cart.clear_cart()
     assert cart.is_cart_empty()
