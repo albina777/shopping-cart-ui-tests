@@ -20,27 +20,7 @@ Automated UI testing suite for an e-commerce website built using **Playwright**,
 - [Jenkins](https://www.jenkins.io/) (CI/CD)
 
 ##  Project Structure
-shopping-cart-ui-tests/
-├── locators/                     # All element locators (selectors)
-│   ├── cart_page_repo.py
-│   ├── home_page_repo.py
-│   └── product_page_repo.py
-│
-├── pages/                        # Page Object Models (POM)
-│   ├── base_page.py
-│   ├── cart_page.py
-│   ├── home_page.py
-│   └── product_page.py
-│
-├── tests/                        # Test cases
-│   └── test_shopping_cart_flow.py
-│
-├── screenshots/                  # Screenshots taken on test failures
-│
-├── .gitignore                    # Git ignored files
-├── Jenkinsfile                   # Jenkins pipeline configuration
-├── pytest.ini                    # Pytest configuration (browser, headed, etc.)
-├── requirements.txt              # All project dependencies
+<pre><code>##  Project Structure ``` shopping-cart-ui-tests/ ├── locators/ │ ├── cart_page_repo.py │ ├── home_page_repo.py │ └── product_page_repo.py │ ├── pages/ │ ├── base_page.py │ ├── cart_page.py │ ├── home_page.py │ └── product_page.py │ ├── tests/ │ └── test_shopping_cart_flow.py │ ├── screenshots/ │ ├── .gitignore ├── Jenkinsfile ├── pytest.ini ├── requirements.txt ``` </code></pre>
 
 
 
