@@ -1,0 +1,5 @@
+CART_LINK = "a.ico-cart"
+REMOVE_CHECKBOX = "input[name='removefromcart']"
+UPDATE_CART_BUTTON = "input[name='updatecart']"
+CART_ROW_BY_NAME = lambda name: f"//table[@class='cart']//a[normalize-space(text())='{name}']"
+CART_EMPTY_TEXT = "div.order-summary-content"
