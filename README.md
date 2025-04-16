@@ -19,9 +19,6 @@ Automated UI testing suite for an e-commerce website built using **Playwright**,
 - [Allure](https://docs.qameta.io/allure/)
 - [Jenkins](https://www.jenkins.io/) (CI/CD)
 
-##  Project Structure
-<pre><code>##  Project Structure ``` shopping-cart-ui-tests/ ├── locators/ │ ├── cart_page_repo.py │ ├── home_page_repo.py │ └── product_page_repo.py │ ├── pages/ │ ├── base_page.py │ ├── cart_page.py │ ├── home_page.py │ └── product_page.py │ ├── tests/ │ └── test_shopping_cart_flow.py │ ├── screenshots/ │ ├── .gitignore ├── Jenkinsfile ├── pytest.ini ├── requirements.txt ``` </code></pre>
-
 
 
 ##Install dependencies:
